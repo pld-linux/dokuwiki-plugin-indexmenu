@@ -24,7 +24,7 @@ DokuWiki sites where pages are organized by namespaces.
 Main features are: 
 - Customizable JavaScript themes.
 - Sortable by date, title and metadata infos.
-- Ajax support in order to speed it up in sites with many pages.
+- AJAX support in order to speed it up in sites with many pages.
 - Customizable context mouse menu for common page actions.
 - Toc pages preview.
 - Hide namespaces/pages according to your site ACLs settings
@@ -38,7 +38,7 @@ przestrzenie nazw.
 Główne możliwości obejmują:
 - konfigurowalne motywy w JavaScripcie,
 - sortowanie po dacie, tytule i metadanych,
-- obsługa Ajaksa w celu przyspieszenia serwisów z wieloma stronami,
+- obsługa AJAX-a w celu przyspieszenia serwisów z wieloma stronami,
 - konfigurowalne menu kontekstowe myszy z często wykonywanymi
   czynnościami dla strony,
 - podgląd stron spisu treści,
