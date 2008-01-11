@@ -1,5 +1,6 @@
 %define		plugin		indexmenu
-Summary:	Dokuwiki IndexMenu Plugin
+Summary:	DokuWiki IndexMenu plugin
+Summary(pl.UTF-8):	Wtyczka IndexMenu dla DokuWiki
 Name:		dokuwiki-plugin-%{plugin}
 Version:	20071026
 Release:	0.1
@@ -16,17 +17,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_plugindir	%{_dokudir}/lib/plugins/%{plugin}
 
 %description
-This plugin allows you to insert a customizable index or a list of pages
-starting from a specified namespace. It should be useful in Dokuwiki sites
-where pages are organized by namespaces.
+This plugin allows you to insert a customizable index or a list of
+pages starting from a specified namespace. It should be useful in
+DokuWiki sites where pages are organized by namespaces.
 
 Main features are: 
-- Customizable javascript themes.
-- Sortable by date,title and metadata infos.
+- Customizable JavaScript themes.
+- Sortable by date, title and metadata infos.
 - Ajax support in order to speed it up in sites with many pages.
 - Customizable context mouse menu for common page actions.
 - Toc pages preview.
-- Hide namespaces/pages according to your site acls settings. More info at the Acl Cache section.
+- Hide namespaces/pages according to your site ACLs settings
+
+%description -l pl.UTF-8
+Ta wtyczka pozwala na umieszczenie konfigurowalnego indeksu lub listy
+stron rozpoczynającej się od określonej przestrzeni nazw. Powinna być
+przydatna w serwisach DokuWiki, w których strony są zorganizowane w
+przestrzenie nazw.
+
+Główne możliwości obejmują:
+- konfigurowalne motywy w JavaScripcie,
+- sortowanie po dacie, tytule i metadanych,
+- obsługa Ajaksa w celu przyspieszenia serwisów z wieloma stronami,
+- konfigurowalne menu kontekstowe myszy z często wykonywanymi
+  czynnościami dla strony,
+- podgląd stron spisu treści,
+- ukrywanie przestrzeni nazw i stron zgodnie z ustawieniami ACL
+  serwisu.
 
 %prep
 %setup -q -n %{plugin}
