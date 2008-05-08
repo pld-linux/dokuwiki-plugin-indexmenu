@@ -3,7 +3,7 @@ Summary:	DokuWiki IndexMenu plugin
 Summary(pl.UTF-8):	Wtyczka IndexMenu dla DokuWiki
 Name:		dokuwiki-plugin-%{plugin}
 Version:	20071026
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://samuele.netsons.org/dokuwiki/media/indexmenu.zip
@@ -13,8 +13,8 @@ Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_dokudir	/usr/share/dokuwiki
-%define		_plugindir	%{_dokudir}/lib/plugins/%{plugin}
+%define		dokudir		/usr/share/dokuwiki
+%define		plugindir	%{dokudir}/lib/plugins/%{plugin}
 
 %description
 This plugin allows you to insert a customizable index or a list of
@@ -50,9 +50,9 @@ Główne możliwości obejmują:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_plugindir}
-cp -a . $RPM_BUILD_ROOT%{_plugindir}
-rm -f $RPM_BUILD_ROOT%{_plugindir}/{CREDITS,changelog}
+install -d $RPM_BUILD_ROOT%{plugindir}
+cp -a . $RPM_BUILD_ROOT%{plugindir}
+rm -f $RPM_BUILD_ROOT%{plugindir}/{CREDITS,changelog}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CREDITS changelog
-%{_plugindir}
+%{plugindir}
