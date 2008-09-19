@@ -2,7 +2,7 @@
 Summary:	DokuWiki IndexMenu plugin
 Summary(pl.UTF-8):	Wtyczka IndexMenu dla DokuWiki
 Name:		dokuwiki-plugin-%{plugin}
-Version:	20071026
+Version:	20080412
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
