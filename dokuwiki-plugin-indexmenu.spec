@@ -2,12 +2,14 @@
 Summary:	DokuWiki IndexMenu plugin
 Summary(pl.UTF-8):	Wtyczka IndexMenu dla DokuWiki
 Name:		dokuwiki-plugin-%{plugin}
-Version:	20080412
+Version:	20090104
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://samuele.netsons.org/dokuwiki/media/indexmenu.zip
-# Source0-md5:	6b0f031c00a636d7ccfa26f5111e6d8f
+# Source0-md5:	cf834e60e96f9ce76697989c899444c8
+# fixes wrong version number inside the ZIP file
+Patch0:		%{name}-version.patch
 URL:		http://wiki.splitbrain.org/plugin:indexmenu
 Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
@@ -48,6 +50,7 @@ Główne możliwości obejmują:
 
 %prep
 %setup -q -n %{plugin}
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
