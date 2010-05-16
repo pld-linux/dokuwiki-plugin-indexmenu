@@ -11,6 +11,7 @@ Source0:	http://samuele.netsons.org/dokuwiki/media/indexmenu.zip
 # fixes wrong version number inside the ZIP file
 Patch0:		%{name}-version.patch
 URL:		http://wiki.splitbrain.org/plugin:indexmenu
+BuildRequires:	unzip
 Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
